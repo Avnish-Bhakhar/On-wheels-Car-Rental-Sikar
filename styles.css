@@ -1,0 +1,570 @@
+/* General Styles */
+body, h1, h2, h3, p {
+    font-family: 'Roboto', sans-serif; /* Modern, clean font */
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+/* Set background color or theme for the entire website */
+body {
+    background-color: #ffffffce; /* Light grey background for a clean look */
+}
+
+/* Container with max-width to avoid content spreading too wide */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header Styles */
+header {
+    background-color: #23b0d0;
+    color: #ffffff;
+    padding: 20px 0;
+    text-align: center;
+    position: relative;
+}
+
+header h1 {
+    font-size: 48px;
+    font-weight: 700;
+    color: #fff;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    margin: 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ff9933;
+}
+
+/* Hero Section */
+.hero {
+    background-image: url('images/rental-banner.png' );
+    background-size: cover;
+    background-position: center;
+    padding: 150px 0;
+    text-align: center;
+    color: #eda3a36c;
+    position: relative;
+    text-decoration: solid white;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay */
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.hero h2 {
+    font-size: 80px;
+    position: relative;
+    z-index: 1;
+    color: white;
+    font-weight: bold;
+    animation: slideIn 2s ease-out forwards;
+    background: linear-gradient(90deg, #ffffff, #bbff00);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    letter-spacing: 2px;
+    overflow: hidden;
+}
+
+
+
+.hero h2:hover {
+    animation: slideIn 2s ease-out forwards, glow 1.5s infinite alternate;
+}
+
+
+.hero p {
+    font-size:40px;
+    position: relative;
+    z-index: 1;
+    color: white;
+}
+
+.btn {
+    background-color: #ff6600;
+    color: #fff;
+    padding: 12px 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: 18px;
+    margin-top: 30px;
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #ff9933;
+    transform: scale(1.05);
+}
+
+/* Cars Section */
+.car-collection {
+    padding: 70px 0;
+    background-color: blanchedalmond; /* White background for a clean section */
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); /* Light shadow to elevate the section */
+    margin-top: 30px;
+}
+
+.car-collection h2 {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 40px;
+    color: #333;
+    background-color: #57575706; /* Add background color to heading */
+    color: white;
+    padding: 15px;
+    border-radius: 8px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Light shadow */
+}
+
+.cars {
+    
+    background-color: blanchedalmond;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.car-card {
+    width: 30%;
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    text-align: center;
+    padding: 20px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.car-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.car-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+.car-card h3 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.car-card p {
+    font-size: 18px;
+    color: #666;
+}
+
+.book-btn {
+    background-color: #ff6600;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+}
+
+.book-btn:hover {
+    background-color: #ff9933;
+    transform: scale(1.05);
+}
+
+/* Booking Form */
+#booking-form {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 40px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+#booking-form h2 {
+    text-align: center; /* Center-aligns the text */
+    font-size: 36px; /* Increases font size */
+    margin-bottom: 30px;
+    background-color: #23b0d0; /* Background color matching the car section */
+    color: white; /* White text for contrast */
+    padding: 20px; /* Increased padding for a larger button effect */
+    border-radius: 8px; /* Rounded corners */
+    text-transform: uppercase; /* Uppercase text for emphasis */
+    letter-spacing: 2px; /* Spacing between letters */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Deeper shadow for depth */
+    font-family: 'Arial', sans-serif; /* Font family for consistency */
+}
+
+/* Optional additional styling for the form itself */
+#booking-form {
+    background-color: #9dd100; /* Light background for the form */
+    border-radius: 8px; /* Rounded corners for the form */
+    padding: 30px; /* Padding around the form */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Light shadow for the form */
+    max-width: 600px; /* Max width for responsiveness */
+    margin: 0 auto; /* Center the form */
+}
+#contact-form{
+    background-color: rgb(126, 126, 126);
+    border-radius: 8px;
+    padding: 30px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Light shadow for the form */
+    max-width: 600px; /* Max width for responsiveness */
+    margin: 0 auto; /* Center the form */
+
+    }
+#contact-form label{
+    display: block;
+    margin-bottom: 10px;
+    color: #333;
+    font-size: 16px;
+    font-weight: bold;
+
+}
+
+#booking-form label {
+    display: block;
+    margin-bottom: 10px;
+    color: #333;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+#booking-form input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #726868;
+    font-size: 16px;
+}
+
+#booking-form button {
+    background-color: #ff6600;
+    color: #fff;
+    border: none;
+    padding: 12px 25px;
+    font-size: 18px;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    width: 100%;
+}
+
+#contact-form button:hover {
+    background-color: #ff9933;
+    transform: scale(1.05);
+}
+#contact-form input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+}
+
+#contact-form button {
+    background-color: #ff6600;
+    color: #fff;
+    border: none;
+    padding: 12px 25px;
+    font-size: 18px;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    width: 100%;
+    
+}
+
+#contact-form button:hover {
+    background-color: #ff9933;
+    transform: scale(1.05);
+}
+
+/* Footer Styles */
+footer {
+    background-color: #333333;
+    color: #fff;
+    text-align: center;
+    padding: 100px;
+    bottom: 0;
+    position: absolute;
+    right: 0;
+    left: 0;
+    font-size: 14px;
+
+}
+
+footer p {
+    margin: 0;
+}
+footer {
+    background-color: #726868f8; /* Set footer background */
+    color: #fff; /* Text color */
+    text-align: center; /* Centered text */
+    padding: 20px; /* Padding around the text */
+    position: relative; /* Or use static if not needed */
+    bottom: 0; /* If using fixed, set to 0 */
+    width: 100%; /* Full width */
+    text-decoration: none;
+    font-size: larger;
+}
+
+
+/* General container styling for About Us section */
+.about-us .container {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+/* Styling for main headings (e.g., About Us, Our Mission) */
+.about-us h2 {
+    font-size: 3em;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    background: linear-gradient(90deg, #ff512f, #dd2476);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 2s ease-in-out;
+}
+
+/* Styling for subheadings (e.g., Our Story, Why Choose Us?) */
+.about-us h3 {
+    font-size: 1.8em;
+    color: #dd2476;
+    margin-top: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+    border-bottom: 2px solid #dd2476;
+    display: inline-block;
+    padding-bottom: 5px;
+    animation: fadeInUp 1.5s ease-in-out;
+}
+
+/* Styling for paragraph text */
+.about-us p {
+    font-size: 1.1em;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    text-align: justify;
+    animation: fadeInUp 1.2s ease-in-out;
+}
+
+/* Styling for the list */
+.about-us ul {
+    list-style-type: disc;
+    margin-left: 20px;
+    font-size: 1em;
+    color: #333;
+    padding: 10px;
+    animation: fadeInUp 1.3s ease-in-out;
+}
+
+/* Styling for list items */
+.about-us ul li {
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+/* Keyframes for animation effects */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+
+
+/* Footer styling */
+footer {
+    background-color: #656262;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    width: 100%;
+    font-size: 14px;
+}
+
+/* Header styling */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #333;
+    color: #fff;
+}
+
+header .logo-container h1 {
+    color: #fff;
+    margin-left: 10px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Section styling */
+.contact-us {
+    padding: 50px;
+    background: #f9f9f9;
+    color: #333;
+}
+
+.contact-us h2 {
+    font-size: 36px;
+    color: #dd2476;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.contact-us p {
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 40px;
+    color: #555;
+}
+
+.contact-info {
+    text-align: center;
+    font-size: 16px;
+    color: #444;
+    margin-bottom: 30px;
+}
+
+.contact-info p {
+    margin: 5px 0;
+}
+
+.contact-info a {
+    color: #dd2476;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Form styling */
+#contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#contact-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #333;
+}
+
+#contact-form input[type="text"],
+#contact-form input[type="email"],
+#contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+#contact-form textarea {
+    resize: vertical;
+    height: 120px;
+}
+
+#contact-form button {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background: #dd2476;
+    border: none;
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background 0.3s ease;
+}
+
