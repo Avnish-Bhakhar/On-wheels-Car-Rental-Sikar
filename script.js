@@ -40,3 +40,4 @@ fetch('/api/bookings', {
     console.log('Booking confirmed:', data);
   })
   .catch(error => console.error('Error booking car:', error));
+
